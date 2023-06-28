@@ -11,7 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(),
+      theme: ThemeData(
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            overlayColor: MaterialStateColor.resolveWith(
+              (states) => const Color.fromARGB(118, 244, 243, 244),
+            ),
+          ),
+        ),
+      ),
       home: const TossApp(),
     );
   }
